@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Co-Sinus</title>
+	<!--Favicons-->
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./images/favicon/site.webmanifest">
+	<link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!--Charset-->
+	<meta charset="UTF-8">
+	<!--Style Sheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+	<!--Responsive-->
+	<link rel="stylesheet" type="text/css" href="css/responsitive.css" media="all">
+	<!--Font Awesome Sheet-->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="all">
+	<!--Fonts-->
+	<link href='//fonts.googleapis.com/css?family=Russo+One&subset=latin,latin-ext,cyrillic' rel='stylesheet'
+		type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet'
+		type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+	<link href="//libs.cdnjs.net/font-awesome/6.4.2/css/all.css" rel="stylesheet">
+	<!--Javascript-->
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/sequence.jquery-min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/quicksand.js"></script>
+	<script src="js/jquery.masonery.js"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.accordion.js"></script>
+	<script src="js/styleswitch.js"></script>
+	<script src="js/custom.js"></script>
+</head>
+
+<body>
+	<header class="dark">
+		<nav>
+			<div id="logo">
+				<h1>Co-Sinus</h1>
+			</div>
+			<div id="menu">
+				<ul>
+					<li>
+						<a href="#main">Главная</a>
+						<a href="#quizazz">Quizazz</a>
+						<a href="#about">О Нас</a>
+						<a href="#feedback">Обратная связь</a>
+						<a style="margin-left: 50px;" onclick="showLoginPopUp()"><i class="fa-solid fa-user"></i>Войти</a>
+						<a onclick="showRegisterPopUp()"><i class="fa-solid fa-right-to-bracket"></i>Регистрация</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<script>
+		function showLoginPopUp(){loginPopUp.classList.add("showLoginPopUp");}
+		function removeLoginPopUp(){loginPopUp.classList.remove("showLoginPopUp");}
+		function showRegisterPopUp(){registerPopUp.classList.add("showRegisterPopUp");}
+		function removeRegisterPopUp(){registerPopUp.classList.remove("showRegisterPopUp");}
+	</script>
+	<div id="loginPopUp" class="loginPopUp">
+		<div class="loginPopUp-content">
+			<div class="login-form">
+				<h2>Форма входа</h2>
+				<form action="">
+					<p>Email</p><input placeholder="Введите еmail" type="email">
+					<p>Пароль</p><input placeholder="Введите пароль" type="password">
+					<input class="custom-btn btn-4" type="submit" value="Войти">
+				</form>
+				<button id="closePopup" onclick="removeLoginPopUp()">Закрыть</button>
+			</div>
+		</div>
+	</div>
+	<div id="registerPopUp" class="registerPopUp">
+		<div class="registerPopUp-content">
+			<div class="register-form">
+				<h2>Форма регистрации</h2>
+				<form action="">
+					<p>Email</p><input placeholder="Введите еmail" type="email">
+					<p>Пароль</p><input placeholder="Введите пароль" type="password">
+					<p>Пароль</p><input placeholder="Введите пароль снова" type="password">
+					<input class="custom-btn btn-4" type="submit" value="Регистрация">
+				</form>
+				<button id="closePopup" onclick="removeRegisterPopUp()">Закрыть</button>
+			</div>
+		</div>
+	</div>
+
+
+	<section id="main" class="dark">
+		<img src="./images/mainImg.jpg">
+	</section>
+
+
+	<section id="quizazz" class="container dark service_section layout_padding">
+		<div class="content">
+			<div class="title icon-preview">
+				<h1>Quizazz <span>Прокачай свои навыки</span></h1>
+			</div>
+			<article class="portfolio">
+				<ul id="stage">
+					<li data-tags="Photography">
+						<div class="thumb"><a href="images/sample/fall.jpg"><img src="images/sample/fall.jpg"
+									alt=""></a></div>
+						<div class="info">
+							<h3>Slowmo Fall</h3>
+							<p>Photo manipulation</p>
+						</div>
+					</li>
+					<li data-tags="Marketing, Photography">
+						<div class="thumb"><a href="images/sample/fall.jpg"><img src="images/sample/coke.jpg"
+									alt=""></a></div>
+						<div class="info">
+							<h3>Speed Audi</h3>
+							<p>Marketing</p>
+						</div>
+					</li>
+					<li data-tags="Illustration">
+						<div class="thumb"><a href="images/sample/fall.jpg"><img src="images/sample/camera.jpg"
+									alt=""></a></div>
+						<div class="info">
+							<h3>The Wild One</h3>
+							<p>Illustration</p>
+						</div>
+					</li>
+					<li data-tags="Illustration">
+						<div class="thumb"><a href="images/sample/fall.jpg"><img src="images/sample/olympus.jpg"
+									alt=""></a></div>
+						<div class="info">
+							<h3>Hyperspace</h3>
+							<p>Illustration</p>
+						</div>
+					</li>
+					<li data-tags="Design">
+						<div class="thumb"><a href="images/sample/fall.jpg"><img src="images/sample/box.jpg" alt=""></a>
+						</div>
+						<div class="info">
+							<h3>Boxee</h3>
+							<p>Product Design</p>
+						</div>
+					</li>
+					<li data-tags="Photography">
+						<div class="thumb"><a href="images/sample/fall.jpg"><img src="images/sample/low-fi.jpg"
+									alt=""></a></div>
+						<div class="info">
+							<h3>Moon Jelly</h3>
+							<p>Photography</p>
+						</div>
+					</li>
+				</ul>
+			</article>
+		</div>
+	</section>
+
+
+	<section id="about" class="container dark">
+		<div class="content">
+			<div class="title icon-and">
+				<h1>О Нас <span> Узнай больше о нас</span></h1>
+				<div class="description">
+					<p>Обучение — это магия, и мы волшебники. Вместе мы формируем будущее.</p>
+				</div>
+			</div>
+			<div class="full">
+				<div class="image"><img src="images/sample/office.jpg" alt=""></div>
+				<div class="divider"></div>
+				<div class="column-half">
+					<div class="subtitle">
+						<h3>Наша история:</h3>
+					</div>
+					<p>Наши первые проекты были скромными, но мы верили в свой потенциал. Мы чувствовали, что у нас есть
+						что-то особенное и важное, что мы хотели бы
+						предложить миру. Наши усилия начали приносить первые плоды, и к нам присоединились еще несколько
+						людей,
+						которые разделяли наши убеждения.Со временем наша команда росла. Мы не только разрабатывали
+						программное
+						обеспечение, но и формировали настоящую семью, где каждый член команды был неотъемлемой частью
+						нашего успеха.
+						Сегодня, эта команда разработчиков, которая начала свой путь в скромных условиях, превратилась в
+						успешную компанию.
+						Мы продолжаем верить в силу технологий и стремимся изменить мир с помощью кода, как это делали в
+						начале нашего пути.</p>
+				</div>
+				<div class="column-half last">
+					<div class="subtitle">
+						<h3>Навыки:</h3>
+					</div>
+					<ul id="skills">
+						<li><span title="50"></span>
+							<p>Сила <strong>50%</strong></p>
+						</li>
+						<li><span title="100"></span>
+							<p>Интеллект <strong>100%</strong></p>
+						</li>
+						<li><span title="75"></span>
+							<p>Мудрость <strong>75%</strong></p>
+						</li>
+						<li><span title="80"></span>
+							<p>Харизма <strong>80%</strong></p>
+						</li>
+					</ul>
+				</div>
+
+				<div id="shot" class="full">
+					<div class="subtitle">
+						<h3>Фоты:</h3>
+					</div>
+					<div class="shot medium">
+						<div id="shotById" class="dribbble-shot">
+							<div><a href="#"><img src="images/sample/dayone-drbb_16.png" alt=""></a></div>
+						</div>
+					</div>
+					<div class="shot">
+						<div id="flickr" class="flickr-shot">
+							<ul>
+								<li><a href="#"><img src="images/sample/flickr/4793559336_2775068f83_s.jpg" alt=""></a>
+								</li>
+								<li><a href="#"><img src="images/sample/flickr/4752635073_7c64ff8fce_s.jpg" alt=""></a>
+								</li>
+								<li><a href="#"><img src="images/sample/flickr/4338027564_a553b9d364_s.jpg" alt=""></a>
+								</li>
+								<li><a href="#"><img src="images/sample/flickr/3919005748_cae0e74f7f_s.jpg" alt=""></a>
+								</li>
+								<li><a href="#"><img src="images/sample/flickr/3503071197_364ac703a8_s.jpg" alt=""></a>
+								</li>
+								<li><a href="#"><img src="images/sample/flickr/3289287799_ce4dd25e5c_s.jpg" alt=""></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="shot"> <img src="images/sample/butter.jpg" alt=""> </div>
+					<div class="shot"> <img src="images/sample/avatar.jpg" alt=""> </div>
+					<div class="shot"> <img src="images/sample/aurora.jpg" alt=""> </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="feedback" class="container dark second">
+		<div class="content">
+			<div class="title icon-phone">
+				<h1>Обратная связь <span>У вас есть вопросы?</span></h1>
+			</div>
+			<div class="full">
+				<div id="contact-form">
+					<form id="contact-us" action="#">
+						<div class="column-half">
+							<div class="formblock">
+								<input type="text" name="contactName" id="contactName" value=""
+									class="txt requiredField" placeholder="Имя:">
+							</div>
+							<div class="formblock">
+								<input type="text" name="email" id="email" value="" class="txt requiredField email"
+									placeholder="Email:">
+							</div>
+							<div class="formblock">
+								<textarea name="comments" id="commentsText" class="txtarea requiredField"
+									placeholder="Сообщение:"></textarea>
+							</div>
+							<button name="submit" type="submit" class="subbutton">Отправить</button>
+						</div>
+						<div class="column-half last">
+							<iframe
+								src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac11ad9ea654d51cc53baab1b0f9993e81707e0857a04928ef110410e45ed1e47&amp;source=constructor"
+								width="410" height="360" frameborder="0" style="border-radius: 15px;"></iframe>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="dark container">
+		<div class="info_section">
+			<div class="address">
+				<h3 class="info_section_header">Адресс:</h3>
+				<a href="">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
+					Расположение : г.Тараз, ул.Төле Би №60
+				</a><br>
+				<a href="">
+					<i class="fa fa-phone" aria-hidden="true"></i>
+					Телефон : +7 777 717 14 14
+				</a><br>
+				<a href="">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					codecharm@gmail.com
+				</a>
+			</div>
+			<div class="info">
+				<h3 class="info_section_header">Информация: </h3>
+				<p> Наша цель - предоставлять высококачествные продукты и услуги, удовлетворяя потребности наших
+					клиентов. Наш опыт и экспертиза позволяют нам успешно справляться с сложными задачами и достигать
+					поставленных целей. Мы рады сотрудничеству и стремимся к постоянному улучшению, чтобы оставаться во
+					главе индустрии и продолжать вдохновлять наших клиентов.</p>
+			</div>
+			<div class="reference">
+				<h3 class="info_section_header">Ссылки:</h3>
+				<a href="#main">Главная</a><br>
+				<a href="#quizazz">Quizazz</a><br>
+				<a href="#about">О Нас</a><br>
+				<a href="#feedback">Обратная связь</a><br>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<section class="footer">
+			<p style="font-size: 17px;">&copy; Copyright 2023 <a href="#">CodeCharm. </a> All Rights Reserved </p>
+		</section>
+	</footer>
+</body>
+
+</html>
